@@ -16,6 +16,7 @@ const server = new ApolloServer({
     origin: '*', // Permitir cualquier origen (útil para desarrollo y Vercel)
     credentials: true, // Permitir envío de cookies/cabeceras si fuera necesario
   },
+  introspection: true
 });
 
 // Puerto (usa el de Vercel o 4000 localmente)
