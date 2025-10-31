@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:init": "node src/db/init.js"
   },
   "keywords": [],
   "author": "",
@@ -11,6 +13,8 @@
   "description": "",
   "dependencies": {
     "@apollo/server": "^5.1.0",
+    "apollo-server": "^3.13.0",
+    "better-sqlite3": "^12.4.1",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
