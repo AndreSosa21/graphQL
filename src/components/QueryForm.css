@@ -4,9 +4,9 @@
   --panel: #ffffff;
   --muted: #6b7280;
   --text: #0f1724;
-  --accent: #6b46ff;      /* morado primario */
-  --accent-2: #4bd1c8;    /* acento secundario (para degradado sutil) */
-  --chip-selected: #4b2b9e; /* morado oscuro */
+  --accent: #6b46ff;
+  --accent-2: #4bd1c8;
+  --chip-selected: #4b2b9e;
   --card-shadow: 0 8px 24px rgba(15,23,42,0.06);
   --glass: rgba(15,23,42,0.03);
   --radius: 12px;
@@ -62,7 +62,6 @@ select:focus, input[type="text"]:focus {
   border-color: rgba(107,72,255,0.28);
 }
 
-/* placeholder contrast */
 input::placeholder { color: rgba(15,23,36,0.35); }
 
 /* chips */

@@ -1,3 +1,5 @@
+// src/App.jsx
+import React from "react";
 import { ApolloProvider } from "@apollo/client";
 import client from "./apollo/client";
 import QueryForm from "./components/QueryForm";
