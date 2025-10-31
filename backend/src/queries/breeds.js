@@ -25,3 +25,4 @@ async function getBreedById(id) {
     throw new Error('No se pudo conectar con la API de razas');
   }
 }
+module.exports = { getBreedById };
