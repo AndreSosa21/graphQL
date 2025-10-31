@@ -145,20 +145,29 @@ export default function QueryForm() {
             )}
 
             <div className="row fields-row">
-              <label>Campos</label>
-              <div className="fields" role="list">
-                {(availableFields[entity] || []).map(f => {
-                  const isChecked = selectedFields.includes(f);
-                  return (
-                    <label key={f} className={`chip ${isChecked ? "checked" : ""}`} onClick={() => toggleField(f)}>
-                      <input type="checkbox" checked={isChecked} readOnly />
-                      <span className="chip-text">{f}</span>
-                      <span className="chip-check">{isChecked ? "✓" : ""}</span>
-                    </label>
-                  );
-                })}
-              </div>
+                <label>Campos</label>
+                <div className="fields" role="list">
+                  {(availableFields[entity] || []).map(f => {
+                    const isChecked = selectedFields.includes(f);
+                    return (
+                      <label
+                        key={f}
+                        className={`chip ${isChecked ? "checked" : ""}`}
+                        style={{ cursor: "pointer" }}
+                      >
+                        <input
+                          type="checkbox"
+                          checked={isChecked}
+                          onChange={() => toggleField(f)}
+                        />
+                        <span className="chip-text">{f}</span>
+                        <span className="chip-check">{isChecked ? "✓" : ""}</span>
+                      </label>
+                    );
+                  })}
+                </div>
             </div>
+
 
             <div className="row actions">
               <button type="submit" className="btn-primary">Consultar</button>
