@@ -1,4 +1,3 @@
-// backend/src/schema/typeDefs.js
 const { gql } = require('apollo-server');
 
 const typeDefs = gql`
@@ -9,6 +8,11 @@ const typeDefs = gql`
     email: String!
     age: Int
     major: String
+  }
+
+  type Weight {
+    imperial: String
+    metric: String
   }
 
   type Breed {
@@ -30,13 +34,29 @@ const typeDefs = gql`
     vocalisation: Int
     wikipedia_url: String
     reference_image_id: String
+    weight: Weight
+    cfa_url: String
+    vetstreet_url: String
+    vcahospitals_url: String
+    country_codes: String
+    country_code: String
+    indoor: Int
+    lap: Int
+    alt_names: String
+    health_issues: Int
+    shedding_level: Int
+    experimental: Int
+    hairless: Int
+    natural: Int
+    rare: Int
+    rex: Int
+    suppressed_tail: Int
+    short_legs: Int
+    hypoallergenic: Int
   }
 
   type Query {
-    # Devuelve todos los estudiantes desde SQLite
     students: [Student!]!
-
-    # Devuelve una raza de gato según su ID desde la API externa
     breed(id: ID!): Breed
   }
 `;
